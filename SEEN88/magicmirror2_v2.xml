@@ -76,6 +76,7 @@
       <Name>PGID</Name>
       <Mode/>
     </Variable>
+  </Environment
   <Labels/>
   <Config Name="Interface port" Target="8080" Default="88" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">88</Config>
   <Config Name="MM2 Modules" Target="/opt/magic_mirror/modules" Default="/mnt/user/appdata/MagicMirror2/modules/" Mode="rw" Description="This is where MagicMirror2 will store it's configuration files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MagicMirror2/modules/</Config>
