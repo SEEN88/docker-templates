@@ -17,7 +17,7 @@
   </Overview>
   <Category>Backup:, Cloud:</Category>
   <WebUI>http://[IP]:[PORT:8989]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/droppy.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/droppy_v2.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/droppy.png</Icon>
   <ExtraParams/>
   <PostArgs/>
