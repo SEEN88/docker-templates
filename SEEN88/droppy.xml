@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/droppy.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Downloaders: MediaApp:Video</Category>
+  <Name Default="droppy">droppy</Name>
+  <Overview>
+    droppy is a self-hosted file storage server with a web interface and capabilites to edit files and view media directly in the browser. It is particularly well-suited to be run on low-end hardware like the Raspberry Pi.[br][br]
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+    [b]/config[/b] This is where droppy will store it's configuration files.[br]
+    [b]/files[/b] This is where droppy will store uploaded files.
+  </Overview>
+  <Registry>https://registry.hub.docker.com/u/silverwind/droppy/</Registry>
+  <Repository>silverwind/droppy</Repository>
+  <GitHub>https://github.com/silverwind/droppy/</GitHub>
+  <Privileged>false</Privileged>
+  <Network Default="bridge">bridge</Network>
+  <WebUI>http://[IP]:[PORT:8989]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sickchill-icon.png</Icon>
+  <Category>Backup:, Cloud:</Category>
+  <Config Type="port" Name="WebUI port" Target="8989" Default="8989" Mode="TCP" Description="Web Interface port" Display="always" Required="true">8989</Config>
+  <Config Type="path" Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/droppy" Mode="rw" Description="This is where droppy will store it's configuration files." Display="hidden" Required="true">/mnt/user/appdata/droppy</Config>
+  <Config Type="path" Name="Droppy Files" Target="/files" Default="/mnt/user/Droppy Files" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/Droppy Files</Config>
+</Container>
