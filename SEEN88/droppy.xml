@@ -16,7 +16,7 @@
   <Privileged>false</Privileged>
   <Network Default="bridge">bridge</Network>
   <WebUI>http://[IP]:[PORT:8989]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/sickchill-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/droppy.png</Icon>
   <Category>Backup:, Cloud:</Category>
   <Config Type="port" Name="WebUI port" Target="8989" Default="8989" Mode="TCP" Description="Web Interface port" Display="always" Required="true">8989</Config>
   <Config Type="path" Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/droppy" Mode="rw" Description="This is where droppy will store it's configuration files." Display="hidden" Required="true">/mnt/user/appdata/droppy</Config>
