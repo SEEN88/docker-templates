@@ -17,7 +17,7 @@
 	[b][u][span style='color: #E80000;']Additional configuration needed:[/span][/u][/b][br]
 	copy [b]/mnt/user/appdata/MagicMirror2/config/config.js.sample[/b] to [b]config.js[/b] and edit the following lines:[br][br]
 	[u]address: [span style='color: #E80000;']"localhost"[/span][/u] becomes [u]address: [span style='color: #E80000;']""[/span][/u] to [b]listen on any interface[/b][br]
-    [u]ipWhitelist: [span style='color: #E80000;']&#91;"127.0.0.1", "::ffff:127.0.0.1", "::1"&#93;[/span][/u] becomes [u]ipWhitelist: [span style='color: #E80000;']&#91;&#93;[/span][/u] to [b]allow all IP addresses to access MagicMirror2[/b]
+    [u]ipWhitelist: [span style='color: #E80000;']"127.0.0.1", "::ffff:127.0.0.1", "::1"[/span][/u] becomes [u]ipWhitelist: [span style='color: #E80000;'][/span][/u] to [b]allow all IP addresses to access MagicMirror2[/b]
   </Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://[IP]:[PORT:88]/</WebUI>
