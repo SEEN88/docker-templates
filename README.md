@@ -4,7 +4,7 @@ N/A
 
 **Description**
 
-unRAID Docker Templates for Docker images that I have pulled from Docker Hub
+unRAID Docker Templates for Docker images that I have not been able to find in Community Apps
 
 **Usage**
 
