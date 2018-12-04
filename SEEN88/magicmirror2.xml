@@ -1,29 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Container version="2">
-  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/magicmirror2.xml</TemplateURL>
-  <Beta>False</Beta>
-  <Name Default="MagicMirror2">MagicMirror2</Name>
+  <Name>MagicMirror2</Name>
+  <Repository>bastilimbach/docker-magicmirror</Repository>
+  <Registry>https://registry.hub.docker.com/u/bastilimbach/docker-magicmirror/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/MichMich/MagicMirror/</Project>
   <Overview>
-	MagicMirror² is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror² allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
+	MagicMirror&#xB2; is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror&#xB2; allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
 	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 	[b]/opt/magic_mirror/config[/b] This is where MagicMirror2 will store it's configuration files.[br]
 	[b]/opt/magic_mirror/modules[/b] This is where MagicMirror2 will store 3rd party module files.[br][br]
 	[b][u][span style='color: #E80000;']Additional configuration needed:[/span][/u][/b][br]
 	copy [b]/mnt/user/appdata/MagicMirror2/config/config.js.sample[/b] to [b]config.js[/b] and edit the following lines:[br][br]
 	[u]address: [span style='color: #E80000;']"localhost"[/span][/u] becomes [u]address: [span style='color: #E80000;']""[/span][/u] to [b]listen on any interface[/b][br]
-	[u]ipWhitelist: [span style='color: #E80000;']&#91;"127.0.0.1", "::ffff:127.0.0.1", "::1"&#93;[/span][/u] becomes [u]ipWhitelist: [span style='color: #E80000;']&#91;&#93;[/span][/u] to [b]allow all IP addresses to access MagicMirror2[/b]
+	[u]ipWhitelist: [span style='color: #E80000;']&#60;"127.0.0.1", "::ffff:127.0.0.1", "::1"&#62;[/span][/u] becomes [u]ipWhitelist: [span style='color: #E80000;']&#60;&#62;[/span][/u] to [b]allow all IP addresses to access MagicMirror2[/b]
   </Overview>
-  <Registry>https://registry.hub.docker.com/u/bastilimbach/docker-magicmirror/</Registry>
-  <Repository>bastilimbach/docker-magicmirror</Repository>
-  <GitHub>https://github.com/bastilimbach/docker-MagicMirror</GitHub>
-  <Privileged>false</Privileged>
-  <Network Default="bridge">bridge</Network>
-  <WebUI>http://[IP]:[PORT:88]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/mm2.png</Icon>
   <Category>HomeAutomation:</Category>
-  <Config Type="Port" Name="Interface port" Target="8080" Default="88" Mode="TCP" Description="Interface port" Display="always" Required="true">88</Config>
-  <Config Type="Path" Name="AppData Config Path" Target="/opt/magic_mirror/config" Default="/mnt/user/appdata/MagicMirror2/config/" Mode="rw" Description="This is where droppy will store it's configuration files." Display="advanced-hide" Required="true">/mnt/user/appdata/MagicMirror2/config/</Config>
-  <Config Type="Path" Name="MM2 Modules" Target="/opt/magic_mirror/modules" Default="/mnt/user/appdata/MagicMirror2/modules/" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/appdata/MagicMirror2/modules/</Config>
-  <Config Type="Variable" Name="Key 1" Target="PUID" Default="99" Description="Container Variable: PUID" Display="always" Required="True">99</Config>
-  <Config Type="Variable" Name="Key 2" Target="PGID" Default="100" Description="Container Variable: PGID" Display="always" Required="True">100</Config>
+  <WebUI>http://[IP]:[PORT:88]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/magicmirror2_v2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/mm2.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+	MagicMirror&#xB2; is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror&#xB2; allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
+	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+	[b]/opt/magic_mirror/config[/b] This is where MagicMirror2 will store it's configuration files.[br]
+	[b]/opt/magic_mirror/modules[/b] This is where MagicMirror2 will store 3rd party module files.[br][br]
+	[b][u][span style='color: #E80000;']Additional configuration needed:[/span][/u][/b][br]
+	copy [b]/mnt/user/appdata/MagicMirror2/config/config.js.sample[/b] to [b]config.js[/b] and edit the following lines:[br][br]
+	[u]address: [span style='color: #E80000;']"localhost"[/span][/u] becomes [u]address: [span style='color: #E80000;']""[/span][/u] to [b]listen on any interface[/b][br]
+	[u]ipWhitelist: [span style='color: #E80000;']&#60;"127.0.0.1", "::ffff:127.0.0.1", "::1"&#62;[/span][/u] becomes [u]ipWhitelist: [span style='color: #E80000;']&#60;&#62;[/span][/u] to [b]allow all IP addresses to access MagicMirror2[/b]
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>88</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MagicMirror2/config/</HostDir>
+      <ContainerDir>/opt/magic_mirror/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/MagicMirror2/modules/</HostDir>
+      <ContainerDir>/opt/magic_mirror/modules</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Interface port" Target="8080" Default="88" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">88</Config>
+  <Config Name="MM2 Modules" Target="/opt/magic_mirror/modules" Default="/mnt/user/appdata/MagicMirror2/modules/" Mode="rw" Description="This is where MagicMirror2 will store it's configuration files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/MagicMirror2/modules/</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="true" Mask="false">000</Config>
+  <Config Name="AppData Config Path" Target="/opt/magic_mirror/config" Default="/mnt/user/appdata/MagicMirror2/config/" Mode="rw" Description="This is where MagicMirror2 will store it's configuration files." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/MagicMirror2/config/</Config>
 </Container>
