@@ -21,9 +21,9 @@
   <WebUI>http://[IP]:[PORT:88]/</WebUI>
   <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/mm2.png</Icon>
   <Category>HomeAutomation:</Category>
-  <Config Type="port" Name="Interface port" Target="8080" Default="88" Mode="TCP" Description="Interface port" Display="always" Required="true">88</Config>
-  <Config Type="path" Name="AppData Config Path" Target="/opt/magic_mirror/config" Default="/mnt/user/appdata/MagicMirror2/config/" Mode="rw" Description="This is where droppy will store it's configuration files." Display="hidden" Required="true">/mnt/user/appdata/MagicMirror2/config/</Config>
-  <Config Type="path" Name="MM2 Modules" Target="/opt/magic_mirror/modules" Default="/mnt/user/appdata/MagicMirror2/modules/" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/appdata/MagicMirror2/modules/</Config>
-  <Config Type="variable" Name="Key 1" Target="PUID" Default="99" Description="Container Variable: PUID" Display="always" Required="True">99</Config>
-  <Config Type="variable" Name="Key 2" Target="PGID" Default="100" Description="Container Variable: PGID" Display="always" Required="True">100</Config>
+  <Config Type="Port" Name="Interface port" Target="8080" Default="88" Mode="TCP" Description="Interface port" Display="always" Required="true">88</Config>
+  <Config Type="Path" Name="AppData Config Path" Target="/opt/magic_mirror/config" Default="/mnt/user/appdata/MagicMirror2/config/" Mode="rw" Description="This is where droppy will store it's configuration files." Display="advanced-hide" Required="true">/mnt/user/appdata/MagicMirror2/config/</Config>
+  <Config Type="Path" Name="MM2 Modules" Target="/opt/magic_mirror/modules" Default="/mnt/user/appdata/MagicMirror2/modules/" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/appdata/MagicMirror2/modules/</Config>
+  <Config Type="Variable" Name="Key 1" Target="PUID" Default="99" Description="Container Variable: PUID" Display="always" Required="True">99</Config>
+  <Config Type="Variable" Name="Key 2" Target="PGID" Default="100" Description="Container Variable: PGID" Display="always" Required="True">100</Config>
 </Container>

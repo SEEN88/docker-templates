@@ -17,9 +17,9 @@
   <WebUI>http://[IP]:[PORT:8989]/</WebUI>
   <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/droppy.png</Icon>
   <Category>Backup:, Cloud:</Category>
-  <Config Type="port" Name="WebUI port" Target="8989" Default="8989" Mode="TCP" Description="Web Interface port" Display="always" Required="true">8989</Config>
-  <Config Type="path" Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/droppy" Mode="rw" Description="This is where droppy will store it's configuration files." Display="hidden" Required="true">/mnt/user/appdata/droppy</Config>
-  <Config Type="path" Name="Droppy Files" Target="/files" Default="/mnt/user/Droppy Files" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/Droppy Files</Config>
-  <Config Type="variable" Name="Key 1" Target="PUID" Default="99" Description="Container Variable: PUID" Display="always" Required="True">99</Config>
-  <Config Type="variable" Name="Key 2" Target="PGID" Default="100" Description="Container Variable: PGID" Display="always" Required="True">100</Config>
+  <Config Type="Port" Name="WebUI port" Target="8989" Default="8989" Mode="TCP" Description="Web Interface port" Display="always" Required="true">8989</Config>
+  <Config Type="Path" Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/droppy" Mode="rw" Description="This is where droppy will store it's configuration files." Display="advanced-hide" Required="true">/mnt/user/appdata/droppy</Config>
+  <Config Type="Path" Name="Droppy Files" Target="/files" Default="/mnt/user/Droppy Files" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/Droppy Files</Config>
+  <Config Type="Variable" Name="Key 1" Target="PUID" Default="99" Description="Container Variable: PUID" Display="always" Required="True">99</Config>
+  <Config Type="Variable" Name="Key 2" Target="PGID" Default="100" Description="Container Variable: PGID" Display="always" Required="True">100</Config>
 </Container>
