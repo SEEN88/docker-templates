@@ -28,16 +28,6 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>
-	MagicMirror² is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror² allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
-	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
-	[b]/opt/magic_mirror/config[/b] This is where MagicMirror2 will store it's configuration files.[br]
-	[b]/opt/magic_mirror/modules[/b] This is where MagicMirror2 will store 3rd party module files.[br][br]
-	[b][u][span style='color: #E80000;']Additional configuration needed:[/span][/u][/b][br]
-	copy [b]/mnt/user/appdata/MagicMirror2/config/config.js.sample[/b] to [b]config.js[/b] and edit the following lines:[br][br]
-	[u]address: [span style='color: #E80000;']"localhost"[/span][/u] becomes [u]address: [span style='color: #E80000;']""[/span][/u] to [b]listen on any interface[/b][br]
-    [u]ipWhitelist: [span style='color: #E80000;']&#91;"127.0.0.1", "::ffff:127.0.0.1", "::1"&#93;[/span][/u] becomes [u]ipWhitelist: [span style='color: #E80000;']&#91;&#93;[/span][/u] to [b]allow all IP addresses to access MagicMirror2[/b]
-  </Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
