@@ -21,4 +21,6 @@
   <Config Type="port" Name="WebUI port" Target="8989" Default="8989" Mode="TCP" Description="Web Interface port" Display="always" Required="true">8989</Config>
   <Config Type="path" Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/droppy" Mode="rw" Description="This is where droppy will store it's configuration files." Display="hidden" Required="true">/mnt/user/appdata/droppy</Config>
   <Config Type="path" Name="Droppy Files" Target="/files" Default="/mnt/user/Droppy Files" Mode="rw" Description="This is where droppy will store uploaded files" Display="always" Required="true">/mnt/user/Droppy Files</Config>
+  <Config Type="variable" Name="Key 1" Target="PUID" Default="99" Description="Container Variable: PUID" Display="always" Required="True">99</Config>
+  <Config Type="variable" Name="Key 2" Target="GUID" Default="100" Description="Container Variable: GUID" Display="always" Required="True">100</Config>
 </Container>
