@@ -10,7 +10,7 @@
   <Support/>
   <Project>https://github.com/MichMich/MagicMirror/</Project>
   <Overview>
-	MagicMirror2 is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror2 allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
+	MagicMirror² is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror² allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
 	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 	[b]/opt/magic_mirror/config[/b] This is where MagicMirror2 will store it's configuration files.[br]
 	[b]/opt/magic_mirror/modules[/b] This is where MagicMirror2 will store 3rd party module files.[br][br]
@@ -29,7 +29,7 @@
   <DonateText/>
   <DonateLink/>
   <Description>
-	MagicMirror2 is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror2 allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
+	MagicMirror² is an open source modular smart mirror platform. With a growing list of installable modules, the MagicMirror² allows you to convert your hallway or bathroom mirror into your personal assistant.[br][br]
 	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 	[b]/opt/magic_mirror/config[/b] This is where MagicMirror2 will store it's configuration files.[br]
 	[b]/opt/magic_mirror/modules[/b] This is where MagicMirror2 will store 3rd party module files.[br][br]
