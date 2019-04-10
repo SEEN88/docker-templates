@@ -68,6 +68,11 @@
       <Name>PGID</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>WEB_INTERFACE_ENABLED</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Interface port" Target="80" Default="8081" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
@@ -75,5 +80,6 @@
   <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
   <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
   <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="true" Mask="false">000</Config>
+  <Config Name="Key 4" Target="WEB_INTERFACE_ENABLED" Default="true" Mode="" Description="Enable WebUI" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ivideon/" Mode="rw" Description="This is where iVideon will store it's configuration files." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ivideon/</Config>
 </Container>
