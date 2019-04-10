@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>iVideon</Name>
+  <Repository>didstopia/ivideon-server</Repository>
+  <Registry>https://registry.hub.docker.com/u/didstopia/ivideon-server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://bitbucket.com/Didstopia/docker-ivideon-server</Project>
+  <Overview>
+	Provides a headless installation of Ivideon's surveillance server software.[br][br]&#xD;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+    [b]/config[/b] This is where iVideon will store it's configuration files.[br]&#xD;
+    [b]/files[/b] This is where iVideon will store saved recordings.&#xD;
+  </Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/ivideon.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/ivideon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+	Provides a headless installation of Ivideon's surveillance server software.[br][br]&#xD;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+    [b]/config[/b] This is where iVideon will store it's configuration files.[br]&#xD;
+    [b]/files[/b] This is where iVideon will store saved recordings.&#xD;
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ivideon/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Videos/CCTV/</HostDir>
+      <ContainerDir>/archive</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Interface port" Target="80" Default="8081" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
+  <Config Name="Recording Archive" Target="/archive" Default="/mnt/user/Videos/CCTV/" Mode="rw" Description="This is where iVideon will store saved recordings." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Videos/CCTV/</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="true" Mask="false">000</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/ivideon/" Mode="rw" Description="This is where iVideon will store it's configuration files." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/ivideon/</Config>
+</Container>
