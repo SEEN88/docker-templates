@@ -68,7 +68,7 @@
     </Variable>
   </Environment>
   <Config Name="WebUI port" Target="8081" Default="8081" Mode="tcp" Description="Web Interface port" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
-  <Config Name="Video Streaming port" Target="8889" Default="8889" Mode="tcp" Description="Web Interface port" Type="Port" Display="always" Required="true" Mask="false">8889</Config>
+  <Config Name="Video Streaming port" Target="8889" Default="8889" Mode="tcp" Description="Video Streaming port" Type="Port" Display="always" Required="true" Mask="false">8889</Config>
   <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
   <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
   <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="true" Mask="false">000</Config>
