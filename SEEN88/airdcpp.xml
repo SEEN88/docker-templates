@@ -13,8 +13,11 @@
 	AirDC++ is an easy way to share files between users. It is easy to adopt for new users but also includes many more advanced features.[br][br]
 	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 	[b]/.airdcpp[/b] This is where AirDC++ will store it's configuration files.[br]
-	[b]/download[/b] This is where AirDC++ will store downloaded files.[br]
-	[b]/share[/b] This is your unRAID array.
+	[b]/Downloads[/b] This is where AirDC++ will store downloaded files.[br]
+	[b]/Share[/b] This is your unRAID array.[br][br]
+	[b]5600[/b] This is the AirDC++ WebUI port[br]
+	[b]5601[/b] This is the AirDC++ WebUI HTTPS port[br]
+	[b]21248,21249[/b] These are the AirDC++ communication ports
   </Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:5600/</WebUI>
@@ -29,8 +32,11 @@
 	AirDC++ is an easy way to share files between users. It is easy to adopt for new users but also includes many more advanced features.[br][br]
 	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
 	[b]/.airdcpp[/b] This is where AirDC++ will store it's configuration files.[br]
-	[b]/download[/b] This is where AirDC++ will store downloaded files.[br]
-	[b]/share[/b] This is your unRAID array.
+	[b]/Downloads[/b] This is where AirDC++ will store downloaded files.[br]
+	[b]/Share[/b] This is your unRAID array.[br][br]
+	[b]5600[/b] This is the AirDC++ WebUI port[br]
+	[b]5601[/b] This is the AirDC++ WebUI HTTPS port[br]
+	[b]21248,21249[/b] These are the AirDC++ communication ports
   </Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -65,12 +71,12 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/AirDC Downloads/</HostDir>
-      <ContainerDir>/download</ContainerDir>
+      <ContainerDir>/Downloads</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/</HostDir>
-      <ContainerDir>/share</ContainerDir>
+      <ContainerDir>/Share</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
   </Data>
@@ -92,11 +98,11 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="WebUI Port" Target="5600" Default="5600" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">5600</Config>
-  <Config Name="HTTPS Port" Target="5601" Default="5601" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">5601</Config>
-  <Config Name="Connection port 1" Target="21248" Default="21248" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">21248</Config>
-  <Config Name="Connection port 1" Target="21248" Default="21248" Mode="udp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">21248</Config>
-  <Config Name="Connection port 2" Target="21249" Default="21249" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">21249</Config>
+  <Config Name="WebUI Port" Target="5600" Default="5600" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5600</Config>
+  <Config Name="HTTPS Port" Target="5601" Default="5601" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5601</Config>
+  <Config Name="Connection port 1" Target="21248" Default="21248" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">21248</Config>
+  <Config Name="Connection port 1" Target="21248" Default="21248" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">21248</Config>
+  <Config Name="Connection port 2" Target="21249" Default="21249" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">21249</Config>
   <Config Name="Downloads" Target="/download" Default="/mnt/user/Temporary Storage/DC Downloads/" Mode="rw" Description="This is where AirDC++ will store downloaded files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Temporary Storage/DC Downloads/</Config>
   <Config Name="Share" Target="/share" Default="/mnt/user/" Mode="ro" Description="Your unRAID server array" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
   <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
