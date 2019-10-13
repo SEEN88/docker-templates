@@ -17,7 +17,9 @@
 	[b]/Share[/b] This is your unRAID array.[br][br]
 	[b]5600[/b] This is the AirDC++ WebUI port[br]
 	[b]5601[/b] This is the AirDC++ WebUI HTTPS port[br]
-	[b]21248,21249[/b] These are the AirDC++ communication ports
+	[b]21248,21249[/b] These are the AirDC++ communication ports[br][br]
+	The default username is [b]admin[/b][br]
+	The default password is [b]password[/b]
   </Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:5600/</WebUI>
@@ -36,7 +38,9 @@
 	[b]/Share[/b] This is your unRAID array.[br][br]
 	[b]5600[/b] This is the AirDC++ WebUI port[br]
 	[b]5601[/b] This is the AirDC++ WebUI HTTPS port[br]
-	[b]21248,21249[/b] These are the AirDC++ communication ports
+	[b]21248,21249[/b] These are the AirDC++ communication ports[br][br]
+	The default username is [b]admin[/b][br]
+	The default password is [b]password[/b]
   </Description>
   <Networking>
     <Mode>bridge</Mode>
