@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>AirDC++</Name>
+  <Repository>gangefors/airdcpp-webclient</Repository>
+  <Registry>https://registry.hub.docker.com/u/gangefors/airdcpp-webclient/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/gangefors/docker-airdcpp-webclient/</Project>
+  <Overview>
+	AirDC++ is an easy way to share files between users. It is easy to adopt for new users but also includes many more advanced features.[br][br]
+	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+	[b]/.airdcpp[/b] This is where AirDC++ will store it's configuration files.[br]
+	[b]/download[/b] This is where AirDC++ will store downloaded files.[br]
+	[b]/share[/b] This is your unRAID array.
+  </Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:5600/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/airdcpp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/airdcpp.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>
+	AirDC++ is an easy way to share files between users. It is easy to adopt for new users but also includes many more advanced features.[br][br]
+	[b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]
+	[b]/.airdcpp[/b] This is where AirDC++ will store it's configuration files.[br]
+	[b]/download[/b] This is where AirDC++ will store downloaded files.[br]
+	[b]/share[/b] This is your unRAID array.
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5600</HostPort>
+        <ContainerPort>5600</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5601</HostPort>
+        <ContainerPort>5601</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21248</HostPort>
+        <ContainerPort>21248</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21248</HostPort>
+        <ContainerPort>21248</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21249</HostPort>
+        <ContainerPort>21249</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/AirDC Downloads/</HostDir>
+      <ContainerDir>/download</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/share</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI Port" Target="5600" Default="5600" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">5600</Config>
+  <Config Name="HTTPS Port" Target="5601" Default="5601" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">5601</Config>
+  <Config Name="Connection port 1" Target="21248" Default="21248" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">21248</Config>
+  <Config Name="Connection port 1" Target="21248" Default="21248" Mode="udp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">21248</Config>
+  <Config Name="Connection port 2" Target="21249" Default="21249" Mode="tcp" Description="Interface port" Type="Port" Display="always" Required="true" Mask="false">21249</Config>
+  <Config Name="Downloads" Target="/download" Default="/mnt/user/Temporary Storage/DC Downloads/" Mode="rw" Description="This is where AirDC++ will store downloaded files" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Temporary Storage/DC Downloads/</Config>
+  <Config Name="Share" Target="/share" Default="/mnt/user/" Mode="ro" Description="Your unRAID server array" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <Config Name="Key 3" Target="UMASK" Default="000" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="always" Required="true" Mask="false">000</Config>
+  <Config Name="AppData Config Path" Target="/.airdcpp" Default="/mnt/user/appdata/airdcpp" Mode="rw" Description="This is where AirDC++ will store it's configuration files." Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/airdcpp/</Config>
+</Container>
