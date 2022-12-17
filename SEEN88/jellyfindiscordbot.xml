@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>jellyfin-discord-music-bot</Name>
+  <Repository>kgt1/jellyfin-discord-music-bot</Repository>
+  <Registry>https://registry.hub.docker.com/u/kgt1/jellyfin-discord-music-bot</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/kgt1/jellyfin-discord-music-bot/</Project>
+  <Overview>&#xD;
+    Jellyfin Discord Music Bot is a Discord Bot for the Jellyfin Media Server![br][br]&#xD;
+  </Overview>
+  <Category>MediaApp:Music</Category>
+  <TemplateURL>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/jellyfindiscordbot.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/SEEN88/docker-templates/master/SEEN88/images/jellyfin.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+    Jellyfin Discord Music Bot is a Discord Bot for the Jellyfin Media Server![br][br]&#xD;
+    [b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#xD;
+    [b]DISCORD_PREFIX[/b] This is the character to prefix bot commands[br]&#xD;
+    [b]DISCORD_TOKEN[/b] This is the your Discord App Token[br]&#xD;
+	[b]JELLYFIN_SERVER_ADDRESS[/b] This is the Jellyfin server address[br]&#xD;
+	[b]JELLYFIN_USERNAME[/b] This is the Jellyfin user to play the music as[br]&#xD;
+	[b]JELLYFIN_PASSWORD[/b] This is the password of the user above[br]&#xD;
+	[b]JELLYFIN_APP_NAME[/b] The name of the app's "player" in Jellyfin[br]&#xD;
+	[b]MESSAGE_UPDATE_INTERVAL[/b] This is the amount of time in ms the play message gets updated with the current time[br]&#xD;
+  </Description>
+  <Config 
+    Type="Variable" 
+    Name="Discord Prefix" 
+    Target="DISCORD_PREFIX" 
+    Default="?" 
+    Description="Character to prefix bot commands" 
+    Mask="false" 
+    Display="advanced-hide" 
+    Required="true">
+    ?
+  </Config>
+  <Config 
+    Type="Variable" 
+    Name="Discord Token" 
+    Target="DISCORD_TOKEN" 
+    Default="yourtokengoeshere" 
+    Description="Discord App Token" 
+    Mask="true" 
+    Display="always-hide" 
+    Required="true">
+    TOKEN
+  </Config>
+  <Config 
+    Type="Variable" 
+    Name="Jellyfin Server Address" 
+    Target="JELLYFIN_SERVER_ADDRESS" 
+    Default="https://jellyfin.DOMAIN" 
+    Description="Your Jellyfin Server address" 
+    Mask="false" 
+    Display="always-hide" 
+    Required="true">
+    https://jellyfin.DOMAIN
+  </Config>
+  <Config 
+    Type="Variable" 
+    Name="Jellyfin Username" 
+    Target="JELLYFIN_USERNAME" 
+    Default="" 
+    Description="Your Jellyfin username" 
+    Mask="false" 
+    Display="always-hide" 
+    Required="true">
+    username
+  </Config>
+  <Config 
+    Type="Variable" 
+    Name="Jellyfin Password" 
+    Target="JELLYFIN_PASSWORD" 
+    Default="" 
+    Description="Your Jellyfin password" 
+    Mask="true" 
+    Display="always-hide" 
+    Required="true">
+    password
+  </Config>
+  <Config 
+    Type="Variable" 
+    Name="Jellyfin App Name" 
+    Target="JELLYFIN_APP_NAME" 
+    Default="Jellyfin Music Bot" 
+    Description="App's display name in Jellyfin" 
+    Mask="false" 
+    Display="always-hide" 
+    Required="true">
+    Jellyfin Music Bot
+  </Config>
+  <Config 
+    Type="Variable" 
+    Name="Message Update Interval" 
+    Target="MESSAGE_UPDATE_INTERVAL" 
+    Default="2000" 
+    Description="The amount of time (in ms) between play message updates" 
+    Mask="false" 
+    Display="always-hide" 
+    Required="true">
+    2000
+  </Config>
+</Container>
